@@ -5,7 +5,9 @@ const customer = require('./customer');
 
 const app = express();
 const cors = require('cors');
-app.use(cors());
+app.use(cors({
+    origin: ["http://localhost:3000/", "https://tax-program-react-04b75a334457.herokuapp.com/"]
+}));
 
 app.use(express.json())
 // Connect to MongoDB
