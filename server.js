@@ -6,7 +6,9 @@ const customer = require('./customer');
 const app = express();
 const cors = require('cors');
 app.use(cors({
-    origin: ["http://localhost:3000/", "https://tax-program-react-04b75a334457.herokuapp.com/"]
+    origin: ['https://thue.tukiuni.vn', 'http://localhost:3000'],
+    methods: ['POST'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 app.use(express.json())
